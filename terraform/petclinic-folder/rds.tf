@@ -12,7 +12,7 @@ resource "aws_db_instance" "db_instance"{
     db_name = var.database_name
     username = var.database_user
     password = var.database_password
-    parameter_group_name = "default.mysql5.7"
+    parameter_group_name = "default.postgres13"
     skip_final_snapshot = true
     db_subnet_group_name = aws_db_subnet_group.db_subnet.name
     vpc_security_group_ids = [aws_security_group.db_sg.id]
